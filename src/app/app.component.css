@@ -1,0 +1,533 @@
+/* Header */
+header {
+    background-color: #93C5FD; /* Azul Claro */
+    color: #ffffff;
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    height: 80px; /* Aumente a altura para evitar corte */
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura e altura */
+}
+
+header .logo img {
+    max-height: 80px; /* Aumente a altura da logo */
+}
+
+header nav {
+    display: flex;
+    gap: 30px; /* Aumente o espaçamento entre os itens do menu */
+}
+
+header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+    font-size: 1.2rem; /* Aumente o tamanho da fonte */
+    padding-top: 10px; /* Aumente o padding superior das letras */
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #228B22; /* Mude a cor do texto ao passar o mouse */
+}
+
+header nav a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: #228B22; /* Verde para a linha embaixo */
+    transition: width 0.3s;
+}
+
+header nav a:hover::after {
+    width: 100%;
+}
+
+header nav a:active {
+    color: #065F46; /* Verde Escuro ao clicar */
+    transform: translateY(2px); /* Efeito de deslocamento para baixo ao clicar */
+}
+
+header nav a.active::after {
+    width: 100%; /* Linha verde embaixo do item ativo */
+    background-color: #228B22; /* Linha verde */
+}
+
+
+/* Seção de Boas-Vindas */
+.hero-section {
+    padding: 100px 20px; /* Ajusta o padding para não sobrepor o header fixo */
+    background-color: #ffffff; /* Fundo branco para contraste */
+    margin-top: 80px; /* Ajusta a margem superior para o header fixo */
+}
+
+.hero-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; /* Permite que o conteúdo se ajuste em diferentes tamanhos de tela */
+    gap: 20px; /* Espaço entre os blocos de texto e imagem */
+    text-align: center;
+}
+
+.text-content {
+    flex: 1;
+    max-width: 600px; /* Limita a largura do texto para melhor legibilidade */
+}
+
+.text-content h1 {
+    font-size: 3rem; /* Tamanho da fonte do título */
+    margin: 0;
+    color: #1E3A8A; /* Azul Escuro */
+    line-height: 1.2; /* Melhora a legibilidade */
+}
+
+.text-content p {
+    font-size: 1.25rem; /* Tamanho da fonte do parágrafo */
+    color: #333;
+    margin: 20px 0; /* Margem ao redor do texto */
+}
+
+.text-content .cta-button {
+    display: inline-block;
+    background-color: #065F46; /* Verde Escuro */
+    color: #ffffff;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.125rem; /* Tamanho da fonte do botão */
+    font-weight: 500;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.text-content .cta-button:hover {
+    background-color: #10B981; /* Verde Médio */
+    transform: translateY(-2px); /* Efeito de elevação ao passar o mouse */
+}
+
+.image-content {
+    flex: 1;
+    max-width: 100%;
+}
+
+.image-content img {
+    max-width: 100%; /* Garante que a imagem se ajuste ao contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    display: block;
+}
+
+/* Seção de Funcionalidades */
+.features-section {
+    padding: 60px 20px;
+    background-color: #f0f4f8; /* Cor de fundo diferente */
+    text-align: center;
+    border-bottom: 2px solid #d1d5db; /* Linha de separação */
+}
+
+.features-section h2 {
+    font-size: 2.5rem;
+    color: #1E3A8A; /* Azul Escuro */
+    margin-bottom: 40px;
+}
+
+.features-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.features-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+    flex-wrap: wrap; /* Permite que os itens se ajustem em diferentes tamanhos de tela */
+}
+
+.feature {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 280px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: center;
+    flex: 1;
+    margin: 10px; /* Adiciona margem para espaçar os itens */
+}
+
+.feature:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.feature .icon {
+    font-size: 3rem;
+    color: #065F46; /* Verde Escuro */
+    margin-bottom: 15px;
+}
+
+.feature h3 {
+    font-size: 1.75rem;
+    color: #1E3A8A; /* Azul Escuro */
+    margin-bottom: 10px;
+}
+
+.feature p {
+    color: #333;
+}
+
+/* Seção de Retorno de Investimento */
+.roi-section {
+    padding: 60px 20px;
+    background-color: #ffffff; /* Fundo branco para contraste */
+    text-align: center;
+}
+
+.roi-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.roi-text {
+    max-width: 100%;
+}
+
+.roi-text h2 {
+    font-size: 2.5rem;
+    color: #1E3A8A; /* Azul Escuro */
+    margin-bottom: 20px;
+}
+
+.roi-text p {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.roi-details {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.roi-item {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    text-align: left;
+    flex: 1;
+    max-width: 280px; /* Ajusta a largura dos itens */
+}
+
+.roi-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.roi-item .icon {
+    font-size: 2.5rem;
+    color: #10B981; /* Verde Médio */
+    margin-bottom: 10px;
+}
+
+.roi-item h3 {
+    font-size: 1.5rem;
+    color: #1E3A8A; /* Azul Escuro */
+    margin-bottom: 10px;
+}
+
+.roi-item p {
+    color: #666;
+}
+
+/* Seção de Benefícios */
+.benefits-section {
+    padding: 50px 20px;
+    background-color: #ffffff; /* Fundo branco */
+    text-align: center;
+}
+
+.benefits-section h2 {
+    font-size: 2rem;
+    color: #1E3A8A; /* Azul Escuro */
+}
+
+.benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.benefit {
+    background-color: #f5f5f5; /* Fundo leve e contrastante */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.benefit .icon {
+    font-size: 2rem;
+    color: #10B981; /* Verde Médio */
+}
+
+.benefit h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.benefit p {
+    color: #666;
+}
+
+/* Seção de Contato */
+.contact-section {
+    padding: 50px 20px;
+    background-color: #f5f5f5; /* Fundo leve */
+    text-align: center;
+}
+
+.contact-section h2 {
+    font-size: 2.5rem;
+    color: #1E3A8A; /* Azul Escuro */
+    margin-bottom: 20px;
+}
+
+.contact-section form {
+    max-width: 700px;
+    margin: 0 auto;
+    background-color: #ffffff; /* Fundo branco para o formulário */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-section .form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section label {
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+.contact-section input,
+.contact-section textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-section input::placeholder,
+.contact-section textarea::placeholder {
+    color: #888;
+}
+
+.contact-section button {
+    background-color: #10B981; /* Verde Médio */
+    color: #ffffff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contact-section button:hover {
+    background-color: #065F46; /* Verde Escuro */
+    transform: scale(1.05);
+}
+
+.contact-section button:active {
+    transform: scale(1.02);
+}
+
+/* Footer */
+.footer {
+    background-color: #1E3A8A; /* Azul Escuro */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-links,
+.social-links {
+    margin-top: 10px;
+}
+
+.footer-links a,
+.social-links a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-content {
+        max-width: 100%; /* Permite que o texto ocupe toda a largura disponível */
+        margin-bottom: 20px; /* Margem inferior para separar o texto da imagem */
+    }
+
+    .image-content {
+        max-width: 100%; /* Garante que a imagem ocupe a largura disponível */
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    header nav {
+        display: none; /* Oculta o menu padrão */
+    }
+
+    header nav.active {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        position: absolute;
+        top: 80px; /* Abaixo do header */
+        right: 0;
+        background-color: #93C5FD; /* Cor do fundo do menu móvel */
+        width: 100%;
+        padding: 20px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    header nav.active a {
+        color: #ffffff; /* Cor dos itens do menu móvel */
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    header nav {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    header .logo img {
+        max-height: 60px;
+    }
+
+    .hero-section {
+        padding: 80px 10px;
+        margin-top: 70px;
+    }
+
+    .text-content h1 {
+        font-size: 2rem;
+    }
+
+    .text-content p {
+        font-size: 0.875rem;
+    }
+
+    .features-row {
+        flex-direction: column;
+    }
+
+    .feature {
+        max-width: 100%;
+        margin: 10px 0;
+    }
+
+    .contact-section form {
+        padding: 20px;
+    }
+
+    .contact-section input,
+    .contact-section textarea {
+        font-size: 0.875rem;
+    }
+
+    .contact-section button {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 10px 15px;
+    }
+
+    header nav {
+        gap: 10px;
+    }
+
+    header nav a {
+        font-size: 0.875rem;
+    }
+
+    .hero-section {
+        padding: 60px 5px;
+        margin-top: 60px;
+    }
+
+    .text-content h1 {
+        font-size: 1.5rem;
+    }
+
+    .text-content p {
+        font-size: 0.75rem;
+    }
+
+    .cta-button {
+        font-size: 0.875rem;
+        padding: 10px 20px;
+    }
+
+    .features-section h2,
+    .roi-section h2,
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .benefits-section h2 {
+        font-size: 1.25rem;
+    }
+}
