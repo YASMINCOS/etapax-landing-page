@@ -17,6 +17,7 @@ header {
 }
 
 header .logo img {
+    padding-top: 10px; /* Aumente o padding superior das letras */
     max-height: 80px; /* Aumente a altura da logo */
 }
 
@@ -31,7 +32,6 @@ header nav a {
     font-weight: 500;
     position: relative;
     font-size: 1.2rem; /* Aumente o tamanho da fonte */
-    padding-top: 10px; /* Aumente o padding superior das letras */
     transition: color 0.3s;
 }
 
